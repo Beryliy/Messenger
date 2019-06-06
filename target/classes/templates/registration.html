@@ -7,9 +7,7 @@
 <h1 >registration</h1>
 <form action="#" th:action="@{/registration}" th:object="${userRegistrationDTO}" method="post" enctype="utf8">
     <label th:for="name">Name</label>
-    <input th:field="*{name}">
-    <label th:for="login">Login</label>
-    <input th:field="*{login}">
+    <input th:field="*{userName}">
     <label th:for="password">Password</label>
     <input th:field="*{password}">
     <label th:for="confirmPassword">Confirm Password</label>

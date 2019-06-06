@@ -42,7 +42,7 @@ public class RegistrationController {
     public ModelAndView registerUserAccount(@ModelAttribute @Valid UserRegistrationDTO userRegistrationDTO,
                                BindingResult result){
         System.out.println(userRegistrationDTO);
-        User existingUser = userService.findByLogin(userRegistrationDTO.getLogin());
+        User existingUser = userService.findByUserName(userRegistrationDTO.getUserName());
         if(existingUser != null){
             result.reject("Registration error.");
         }

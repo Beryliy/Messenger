@@ -10,9 +10,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class UserRegistrationDTO {
     @NotEmpty
-    private String name;
-    @NotEmpty
-    private String login;
+    private String userName;
     @NotEmpty
     private String password;
     @NotEmpty

@@ -7,14 +7,14 @@
 <body>
 <table>
     <thead>
-    <tr th:if="${conversation.empty}">
+    <tr th:if="${conversations.empty}">
         <td colspan="2"> No Books Available </td>
-    </tr>
-    <tr th:each="conversation : ${conversations}">
-        <td><span th:text="${conversation.title}"> Title </span></td>
     </tr>
     </thead>
     <tbody>
+    <tr th:each="conversation : ${conversations}">
+        <td><span th:text="${conversation.title}"> Title </span></td>
+    </tr>
     </tbody>
 </table>
 </body>
