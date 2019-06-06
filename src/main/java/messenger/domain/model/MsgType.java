@@ -1,4 +1,4 @@
-package domain.model;
+package messenger.domain.model;
 
 /**
  * Created by flogiston on 01.06.19.

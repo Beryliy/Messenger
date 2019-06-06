@@ -1,8 +1,7 @@
-package domain.model;
+package messenger.domain.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Objects;
 
 @Entity
 @Table(name = "message", schema = "MDB", catalog = "")

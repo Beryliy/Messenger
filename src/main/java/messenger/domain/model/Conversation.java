@@ -1,4 +1,4 @@
-package domain.model;
+package messenger.domain.model;
 
 import javax.persistence.*;
 
