@@ -24,12 +24,12 @@ public class ConversationServiceImpl implements ConversationService{
     private ParticipantRepository participantRepository;
 
     @Override
-    public Conversation findByName(String name) {
-        return null;
+    public Conversation findByTitle(String title) {
+        return conversationRepository.findByTitle(title);
     }
 
     @Override
-    public void save(ConversationDTO conversationDTO) {
+    public Conversation save(ConversationDTO conversationDTO) {
         Conversation conversation = new Conversation();
         conversation.setTitle(conversationDTO.getTitle());
         conversationRepository.save(conversation);
@@ -41,5 +41,6 @@ public class ConversationServiceImpl implements ConversationService{
         participant.setRoles(roles);
         participant.setConversation(conversation);
         participantRepository.save(participant);
+        return conversation;
     }
 }

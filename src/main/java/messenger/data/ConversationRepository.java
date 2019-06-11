@@ -10,7 +10,6 @@ import java.util.List;
  * Created by flogiston on 01.06.19.
  */
 public interface ConversationRepository extends CrudRepository<Conversation, Integer> {
-    List<Conversation> findByCreator(User creator);
-    Conversation findByName(String name);
+    Conversation findByTitle(String name);
     Conversation save(Conversation conversation);
 }

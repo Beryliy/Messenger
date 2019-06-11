@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/conversation}" th:object="${participantDTO}" method="post" enctype="utf8">
+    <label th:for="username">Username</label>
+    <input th:field="*{username}">
+    <input th:type="submit" th:name="add" th:class="button" th:value="add"/>
+    <input th:type="submit" th:name="delete" th:class="button" th:value="delete"/>
+</form>
+<table>
+    <thead>
+    <tr th:if="${users.empty}">
+        <td colspan="2"> No Conversation Available </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td><span th:text="${user.userName}"> Title </span></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</body>
+</html>

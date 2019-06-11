@@ -1,19 +1,19 @@
-package messenger.data;
+package messenger.service;
 
+import messenger.controllers.dto.ParticipantDTO;
 import messenger.domain.model.Conversation;
 import messenger.domain.model.Participant;
 import messenger.domain.model.User;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 /**
- * Created by flogiston on 10.06.19.
+ * Created by flogiston on 11.06.19.
  */
-public interface ParticipantRepository extends CrudRepository<Participant, Integer> {
-    Participant save(Participant participant);
+public interface ParticipantService {
+    void save(ParticipantDTO DTO);
     Participant findByUserAndConversation(User user, Conversation conversation);
     List<Participant> findByUser(User user);
     List<Participant> findByConversation(Conversation conversation);
-    long deleteByUserAndConversation(User user, Conversation conversation);
+    void deleteByUserAndConversation(User user, Conversation conversation);
 }

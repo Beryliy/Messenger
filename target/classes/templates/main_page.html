@@ -8,12 +8,12 @@
 <table>
     <thead>
     <tr th:if="${conversations.empty}">
-        <td colspan="2"> No Books Available </td>
+        <td colspan="2"> No Conversation Available </td>
     </tr>
     </thead>
     <tbody>
     <tr th:each="conversation : ${conversations}">
-        <td><span th:text="${conversation.title}"> Title </span></td>
+        <td><a th:href="@{/conversation(title=${conversation.title})}"><span th:text="${conversation.title}"> Title </span></a></td>
     </tr>
     </tbody>
 </table>

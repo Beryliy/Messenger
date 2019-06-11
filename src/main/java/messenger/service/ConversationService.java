@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Created by flogiston on 10.06.19.
  */
 public interface ConversationService {
-    Conversation findByName(String name);
-    void save(ConversationDTO conversationDTO);
+    Conversation findByTitle(String name);
+    Conversation save(ConversationDTO conversationDTO);
 }
 
